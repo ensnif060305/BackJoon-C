@@ -60,3 +60,62 @@ ${A-B}
 ${A*B}
 ${parseInt(A/B)}
 ${A%B}`);
+
+/*10926*/
+
+const readline = require("readline");
+ 
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+ 
+rl.on("line", (line) => {
+    input = line.split(' ').map(el => String(el));
+    rl.close();
+});
+ 
+rl.on('close', () => {
+    console.log(`${input}??!`);
+    process.exit();
+})
+
+/*18108*/
+
+const readline = require("readline");
+ 
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+ 
+rl.on("line", (line) => {
+    input = line.split(' ').map(el => parseInt(el));
+    rl.close();
+});
+ 
+rl.on('close', () => {
+    console.log(input-543);
+    process.exit();
+})
+
+/*3003*/
+
+const readline = require("readline");
+ 
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+input = [];
+
+rl.on("line", (line) => {
+    input = line.split(' ').map(el => parseInt(el));
+    rl.close();
+});
+ 
+rl.on('close', () => {
+    console.log(`${1-input[0]} ${1-input[1]} ${2-input[2]} ${2-input[3]} ${2-input[4]} ${8-input[5]}`);
+    process.exit();
+})
