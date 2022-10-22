@@ -119,3 +119,22 @@ rl.on('close', () => {
     console.log(`${1-input[0]} ${1-input[1]} ${2-input[2]} ${2-input[3]} ${2-input[4]} ${8-input[5]}`);
     process.exit();
 })
+
+/*2588*/
+
+const fs = require('fs');
+const inputData = fs.readFileSync(0, 'utf8').toString().split('\n');
+
+const A = parseInt(inputData[0]);
+const B = parseInt(inputData[1]);
+
+const first = A * (B%10);
+const second = A * Math.floor((B%100)/10);
+const third = A * (Math.floor(B/100));
+const result = first + second*10 + third*100;
+
+
+console.log(first);
+console.log(second);
+console.log(third);
+console.log(result);
